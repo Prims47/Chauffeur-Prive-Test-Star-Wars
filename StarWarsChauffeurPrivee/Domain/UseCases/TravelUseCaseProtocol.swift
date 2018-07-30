@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol TravelUseCase {
+protocol TravelUseCaseProtocol {
     typealias TravelsCompletion = ([Travel], Error?) -> Void
     
-    func travels(complation: @escaping TravelsCompletion)
+    mutating func travels(completion: @escaping TravelsCompletion)
 }
