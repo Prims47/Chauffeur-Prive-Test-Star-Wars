@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0557D7A7CD244A5206E33DE9 /* Pods_StarWarsChauffeurPriveeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A68365AAC9EF697865CDC8 /* Pods_StarWarsChauffeurPriveeTests.framework */; };
 		117BD321210F75FC002B341B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD320210F75FC002B341B /* AppDelegate.swift */; };
-		117BD323210F75FD002B341B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD322210F75FD002B341B /* ViewController.swift */; };
+		117BD323210F75FD002B341B /* TripListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD322210F75FD002B341B /* TripListController.swift */; };
 		117BD326210F75FD002B341B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117BD324210F75FD002B341B /* Main.storyboard */; };
 		117BD328210F75FE002B341B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117BD327210F75FE002B341B /* Assets.xcassets */; };
 		117BD32B210F75FE002B341B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117BD329210F75FE002B341B /* LaunchScreen.storyboard */; };
@@ -55,7 +55,7 @@
 /* Begin PBXFileReference section */
 		117BD31D210F75FC002B341B /* StarWarsChauffeurPrivee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsChauffeurPrivee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117BD320210F75FC002B341B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		117BD322210F75FD002B341B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		117BD322210F75FD002B341B /* TripListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListController.swift; sourceTree = "<group>"; };
 		117BD325210F75FD002B341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		117BD327210F75FE002B341B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117BD32A210F75FE002B341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,13 +139,13 @@
 		117BD31F210F75FC002B341B /* StarWarsChauffeurPrivee */ = {
 			isa = PBXGroup;
 			children = (
+				117BD3E9210FCE57002B341B /* Scenes */,
 				117BD3AD210F9CB3002B341B /* Network */,
 				117BD320210F75FC002B341B /* AppDelegate.swift */,
 				117BD3A2210F9AFD002B341B /* Domain */,
 				117BD32C210F75FE002B341B /* Info.plist */,
 				117BD3A1210F9AA2002B341B /* Resources */,
 				117BD342210F9159002B341B /* Storyboards */,
-				117BD322210F75FD002B341B /* ViewController.swift */,
 			);
 			path = StarWarsChauffeurPrivee;
 			sourceTree = "<group>";
@@ -309,6 +309,22 @@
 				117BD3E7210FC913002B341B /* NetworkError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		117BD3E9210FCE57002B341B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				117BD3EA210FCE62002B341B /* TripsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		117BD3EA210FCE62002B341B /* TripsList */ = {
+			isa = PBXGroup;
+			children = (
+				117BD322210F75FD002B341B /* TripListController.swift */,
+			);
+			path = TripsList;
 			sourceTree = "<group>";
 		};
 		4E44C4B9AC22859B38850D23 /* Frameworks */ = {
@@ -518,7 +534,7 @@
 				117BD3CF210FB29B002B341B /* TripInformation+Serializable.swift in Sources */,
 				117BD3A7210F9B85002B341B /* TripInformation.swift in Sources */,
 				117BD3B3210F9D15002B341B /* Network.swift in Sources */,
-				117BD323210F75FD002B341B /* ViewController.swift in Sources */,
+				117BD323210F75FD002B341B /* TripListController.swift in Sources */,
 				117BD3C9210FA56C002B341B /* APIRouter.swift in Sources */,
 				117BD3D1210FB58A002B341B /* TravelDistance+Serializable.swift in Sources */,
 				117BD3CB210FAF29002B341B /* TravelDistance.swift in Sources */,
