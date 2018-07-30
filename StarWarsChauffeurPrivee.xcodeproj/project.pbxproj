@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		117BD321210F75FC002B341B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD320210F75FC002B341B /* AppDelegate.swift */; };
+		117BD323210F75FD002B341B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD322210F75FD002B341B /* ViewController.swift */; };
+		117BD326210F75FD002B341B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117BD324210F75FD002B341B /* Main.storyboard */; };
+		117BD328210F75FE002B341B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117BD327210F75FE002B341B /* Assets.xcassets */; };
+		117BD32B210F75FE002B341B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117BD329210F75FE002B341B /* LaunchScreen.storyboard */; };
+		117BD336210F75FE002B341B /* StarWarsChauffeurPriveeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD335210F75FE002B341B /* StarWarsChauffeurPriveeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		117BD332210F75FE002B341B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117BD315210F75FC002B341B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117BD31C210F75FC002B341B;
+			remoteInfo = StarWarsChauffeurPrivee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		117BD31D210F75FC002B341B /* StarWarsChauffeurPrivee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsChauffeurPrivee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		117BD320210F75FC002B341B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		117BD322210F75FD002B341B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		117BD325210F75FD002B341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		117BD327210F75FE002B341B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		117BD32A210F75FE002B341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		117BD32C210F75FE002B341B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117BD331210F75FE002B341B /* StarWarsChauffeurPriveeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsChauffeurPriveeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117BD335210F75FE002B341B /* StarWarsChauffeurPriveeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChauffeurPriveeTests.swift; sourceTree = "<group>"; };
+		117BD337210F75FE002B341B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117BD31A210F75FC002B341B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117BD32E210F75FE002B341B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		117BD314210F75FC002B341B = {
+			isa = PBXGroup;
+			children = (
+				117BD31F210F75FC002B341B /* StarWarsChauffeurPrivee */,
+				117BD334210F75FE002B341B /* StarWarsChauffeurPriveeTests */,
+				117BD31E210F75FC002B341B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		117BD31E210F75FC002B341B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				117BD31D210F75FC002B341B /* StarWarsChauffeurPrivee.app */,
+				117BD331210F75FE002B341B /* StarWarsChauffeurPriveeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		117BD31F210F75FC002B341B /* StarWarsChauffeurPrivee */ = {
+			isa = PBXGroup;
+			children = (
+				117BD320210F75FC002B341B /* AppDelegate.swift */,
+				117BD322210F75FD002B341B /* ViewController.swift */,
+				117BD324210F75FD002B341B /* Main.storyboard */,
+				117BD327210F75FE002B341B /* Assets.xcassets */,
+				117BD329210F75FE002B341B /* LaunchScreen.storyboard */,
+				117BD32C210F75FE002B341B /* Info.plist */,
+			);
+			path = StarWarsChauffeurPrivee;
+			sourceTree = "<group>";
+		};
+		117BD334210F75FE002B341B /* StarWarsChauffeurPriveeTests */ = {
+			isa = PBXGroup;
+			children = (
+				117BD335210F75FE002B341B /* StarWarsChauffeurPriveeTests.swift */,
+				117BD337210F75FE002B341B /* Info.plist */,
+			);
+			path = StarWarsChauffeurPriveeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		117BD31C210F75FC002B341B /* StarWarsChauffeurPrivee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117BD33A210F75FE002B341B /* Build configuration list for PBXNativeTarget "StarWarsChauffeurPrivee" */;
+			buildPhases = (
+				117BD319210F75FC002B341B /* Sources */,
+				117BD31A210F75FC002B341B /* Frameworks */,
+				117BD31B210F75FC002B341B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWarsChauffeurPrivee;
+			productName = StarWarsChauffeurPrivee;
+			productReference = 117BD31D210F75FC002B341B /* StarWarsChauffeurPrivee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		117BD330210F75FE002B341B /* StarWarsChauffeurPriveeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117BD33D210F75FE002B341B /* Build configuration list for PBXNativeTarget "StarWarsChauffeurPriveeTests" */;
+			buildPhases = (
+				117BD32D210F75FE002B341B /* Sources */,
+				117BD32E210F75FE002B341B /* Frameworks */,
+				117BD32F210F75FE002B341B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117BD333210F75FE002B341B /* PBXTargetDependency */,
+			);
+			name = StarWarsChauffeurPriveeTests;
+			productName = StarWarsChauffeurPriveeTests;
+			productReference = 117BD331210F75FE002B341B /* StarWarsChauffeurPriveeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		117BD315210F75FC002B341B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = StarWarsChauffeurPrivee;
+				TargetAttributes = {
+					117BD31C210F75FC002B341B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					117BD330210F75FE002B341B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 117BD31C210F75FC002B341B;
+					};
+				};
+			};
+			buildConfigurationList = 117BD318210F75FC002B341B /* Build configuration list for PBXProject "StarWarsChauffeurPrivee" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 117BD314210F75FC002B341B;
+			productRefGroup = 117BD31E210F75FC002B341B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				117BD31C210F75FC002B341B /* StarWarsChauffeurPrivee */,
+				117BD330210F75FE002B341B /* StarWarsChauffeurPriveeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		117BD31B210F75FC002B341B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117BD32B210F75FE002B341B /* LaunchScreen.storyboard in Resources */,
+				117BD328210F75FE002B341B /* Assets.xcassets in Resources */,
+				117BD326210F75FD002B341B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117BD32F210F75FE002B341B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117BD319210F75FC002B341B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117BD323210F75FD002B341B /* ViewController.swift in Sources */,
+				117BD321210F75FC002B341B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117BD32D210F75FE002B341B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117BD336210F75FE002B341B /* StarWarsChauffeurPriveeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		117BD333210F75FE002B341B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117BD31C210F75FC002B341B /* StarWarsChauffeurPrivee */;
+			targetProxy = 117BD332210F75FE002B341B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		117BD324210F75FD002B341B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117BD325210F75FD002B341B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		117BD329210F75FE002B341B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117BD32A210F75FE002B341B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		117BD338210F75FE002B341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		117BD339210F75FE002B341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		117BD33B210F75FE002B341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YA7TV38U2Z;
+				INFOPLIST_FILE = StarWarsChauffeurPrivee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.StarWarsChauffeurPrivee.app.StarWarsChauffeurPrivee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		117BD33C210F75FE002B341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YA7TV38U2Z;
+				INFOPLIST_FILE = StarWarsChauffeurPrivee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.StarWarsChauffeurPrivee.app.StarWarsChauffeurPrivee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		117BD33E210F75FE002B341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YA7TV38U2Z;
+				INFOPLIST_FILE = StarWarsChauffeurPriveeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.StarWarsChauffeurPrivee.app.StarWarsChauffeurPriveeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsChauffeurPrivee.app/StarWarsChauffeurPrivee";
+			};
+			name = Debug;
+		};
+		117BD33F210F75FE002B341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YA7TV38U2Z;
+				INFOPLIST_FILE = StarWarsChauffeurPriveeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.StarWarsChauffeurPrivee.app.StarWarsChauffeurPriveeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsChauffeurPrivee.app/StarWarsChauffeurPrivee";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117BD318210F75FC002B341B /* Build configuration list for PBXProject "StarWarsChauffeurPrivee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117BD338210F75FE002B341B /* Debug */,
+				117BD339210F75FE002B341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117BD33A210F75FE002B341B /* Build configuration list for PBXNativeTarget "StarWarsChauffeurPrivee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117BD33B210F75FE002B341B /* Debug */,
+				117BD33C210F75FE002B341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117BD33D210F75FE002B341B /* Build configuration list for PBXNativeTarget "StarWarsChauffeurPriveeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117BD33E210F75FE002B341B /* Debug */,
+				117BD33F210F75FE002B341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 117BD315210F75FC002B341B /* Project object */;
+}
