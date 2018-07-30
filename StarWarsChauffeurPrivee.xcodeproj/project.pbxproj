@@ -89,11 +89,10 @@
 		117BD31F210F75FC002B341B /* StarWarsChauffeurPrivee */ = {
 			isa = PBXGroup;
 			children = (
+				117BD342210F9159002B341B /* Storyboards */,
 				117BD320210F75FC002B341B /* AppDelegate.swift */,
 				117BD322210F75FD002B341B /* ViewController.swift */,
-				117BD324210F75FD002B341B /* Main.storyboard */,
 				117BD327210F75FE002B341B /* Assets.xcassets */,
-				117BD329210F75FE002B341B /* LaunchScreen.storyboard */,
 				117BD32C210F75FE002B341B /* Info.plist */,
 			);
 			path = StarWarsChauffeurPrivee;
@@ -106,6 +105,15 @@
 				117BD337210F75FE002B341B /* Info.plist */,
 			);
 			path = StarWarsChauffeurPriveeTests;
+			sourceTree = "<group>";
+		};
+		117BD342210F9159002B341B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				117BD329210F75FE002B341B /* LaunchScreen.storyboard */,
+				117BD324210F75FD002B341B /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		4E44C4B9AC22859B38850D23 /* Frameworks */ = {
