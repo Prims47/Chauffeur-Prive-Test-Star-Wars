@@ -9,8 +9,9 @@
 import Foundation
 
 struct Travel {
-    var id: String
+    var id: Int
     var pilot: Pilot
+    var distance: TravelDistance
     var duration: Int
     var pickup: TripInformation
     var dropOff: TripInformation

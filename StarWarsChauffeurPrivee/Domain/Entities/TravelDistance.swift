@@ -1,5 +1,5 @@
 //
-//  TripInformation.swift
+//  TravelDistance.swift
 //  StarWarsChauffeurPrivee
 //
 //  Created by Ilan Benichou on 30/07/2018.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct TripInformation {
-    var planetName: String
-    var planetPicture: String
-    var date: String
+struct TravelDistance {
+    var value: Int
+    var unit : String
 }
