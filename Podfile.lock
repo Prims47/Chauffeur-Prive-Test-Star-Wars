@@ -1,16 +1,24 @@
 PODS:
+  - Alamofire (4.7.3)
   - SwiftLint (0.26.0)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
+  - Alamofire (= 4.7.3)
   - SwiftLint (= 0.26.0)
+  - SwiftyJSON (= 4.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: be42ccd4bce007c4f096b070a2d8ffe1efd1ac0e
+PODFILE CHECKSUM: ac018f160364e0aebab47cd30ead5eaf62fc2e0a
 
 COCOAPODS: 1.5.0
