@@ -21,8 +21,8 @@ struct Network: NetworkProtocol {
     
     private var networker: NetworkProtocol
 
-    init(isMock: Bool = false) {
-        if isMock {
+    init() {
+        if AppConfig.isMock() {
             self.networker = StubbedNetworker()
             
             return

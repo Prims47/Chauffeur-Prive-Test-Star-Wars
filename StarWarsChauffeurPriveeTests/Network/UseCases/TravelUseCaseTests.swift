@@ -20,7 +20,7 @@ class TravelUseCaseTests: XCTestCase {
     }
     
     func testSuccessUseCase() {
-        var useCase = TravelUseCase(network: Network(isMock: true))
+        var useCase = TravelUseCase(network: Network())
         
         useCase.travels { (travels: [Travel], error) in
             XCTAssertNil(error)
