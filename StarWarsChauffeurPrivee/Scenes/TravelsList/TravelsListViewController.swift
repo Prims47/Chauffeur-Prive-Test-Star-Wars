@@ -8,7 +8,12 @@
 
 import UIKit
 
-class TripListController: UIViewController {
+protocol TravelsListDisplayLogic: class {
+    func displayTravels(viewModel: TravelsListModel.ViewModel)
+    func displayError(viewModel: TravelsListModel.ViewModel.DisplayError)
+}
+
+class TravelsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +22,7 @@ class TripListController: UIViewController {
 }
 
 // MARK: - Setup UI
-extension TripListController {
+extension TravelsListViewController {
     func setupUI() {
         self.setupNavigationBar()
         self.setupTitle()
@@ -40,5 +45,16 @@ extension TripListController {
         navLabel.attributedText =  attributedString
         
         self.navigationItem.titleView = navLabel
+    }
+}
+
+// MARK: - TravelsListDisplayLogic
+extension TravelsListViewController: TravelsListDisplayLogic {
+    func displayTravels(viewModel: TravelsListModel.ViewModel) {
+        //@todo: tableview reload...
+    }
+    
+    func displayError(viewModel: TravelsListModel.ViewModel.DisplayError) {
+        //@todo: display error
     }
 }
