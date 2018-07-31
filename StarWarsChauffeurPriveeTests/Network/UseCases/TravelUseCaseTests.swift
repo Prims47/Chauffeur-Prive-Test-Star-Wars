@@ -11,29 +11,43 @@ import XCTest
 @testable import StarWarsChauffeurPrivee
 
 class TravelUseCaseTests: XCTestCase {
+    var useExpectation: XCTestExpectation?
+
     override func setUp() {
         super.setUp()
+        
+        useExpectation = expectation(description: "expectation")
     }
     
     override func tearDown() {
         super.tearDown()
+        
+        useExpectation = nil
     }
     
     func testSuccessUseCase() {
         var useCase = TravelUseCase(network: Network())
         
-        useCase.travels { (travels: [Travel], error) in
+        useCase.travels {[weak self] (travels: [Travel], error) in
             XCTAssertNil(error)
             XCTAssertEqual(7, travels.count)
+            
+            self?.useExpectation?.fulfill()
         }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
     
     func testErrorUseCase() {
         var useCase = TravelUseCase(network: NetworkError(mockingFilename: "pepito"))
         
-        useCase.travels { (travels: [Travel], error) in
+        useCase.travels {[weak self] (travels: [Travel], error) in
             XCTAssertNotNil(error)
             XCTAssertTrue(travels.isEmpty)
+            
+            self?.useExpectation?.fulfill()
         }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
 }

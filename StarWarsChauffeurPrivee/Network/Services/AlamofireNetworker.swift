@@ -17,7 +17,7 @@ struct AlamofireNetworker: NetworkProtocol {
             switch response.result {
             case .success(_):
                 guard let data = response.data else {
-                    let error: NSError = NSError(domain: "CollectionAlamofireDataNetWorker", code: 1, userInfo: nil)
+                    let error: NSError = NSError(domain: "CollectionAlamofireDataNetworker", code: 1, userInfo: nil)
                     completion([], error)
                     
                     return
