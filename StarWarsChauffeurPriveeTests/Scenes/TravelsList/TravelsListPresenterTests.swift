@@ -23,12 +23,12 @@ class TravelsListPresenterTests: XCTestCase {
         presentExpectation = nil
     }
     
-    fileprivate class ViewController: TravelsListDisplayLogic {
+    fileprivate class ViewController: TravelsListDisplayLogic {        
         var methodCalledName: String?
 
         weak var presenterTests: TravelsListPresenterTests?
 
-        func displayTravels(viewModel: TravelsListModel.ViewModel) {
+        func displayTravels(viewModel: TravelsListModel.ViewModel.DisplayTravels) {
             presenterTests?.presentExpectation?.fulfill()
             methodCalledName = #function
         }

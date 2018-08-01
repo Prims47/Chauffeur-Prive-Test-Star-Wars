@@ -14,10 +14,12 @@ struct TravelsListModel {
     }
     
     struct ViewModel {
-        var travels: [Travel]
-        
         struct DisplayError {
             var error: String
+        }
+        
+        struct DisplayTravels {
+            var travels: [Travel]
         }
     }
 }

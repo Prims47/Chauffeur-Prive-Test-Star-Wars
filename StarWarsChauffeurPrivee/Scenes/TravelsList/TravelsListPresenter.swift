@@ -18,7 +18,8 @@ class TravelsListPresenter: TravelsListPresentationLogic {
     
     func presentTravels(response: TravelsListModel.Response) {
         DispatchQueue.main.async {
-            self.viewController?.displayTravels(viewModel: TravelsListModel.ViewModel(travels: response.travels))
+            let travelsSortedByPilotName = response.travels.sorted(by: { $0.pilot.name < $1.pilot.name })
+            self.viewController?.displayTravels(viewModel: TravelsListModel.ViewModel.DisplayTravels(travels: travelsSortedByPilotName))
         }
     }
     
