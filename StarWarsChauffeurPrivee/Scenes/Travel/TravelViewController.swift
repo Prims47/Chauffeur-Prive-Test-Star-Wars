@@ -34,8 +34,7 @@ class TravelViewController: UIViewController {
             if let pilot = self.travel?.pilot {
                 self.customizePilotName(pilotName: pilot.name)
                 self.handlePilotImage(avatar: pilot.avatar)
-                
-                
+
                 self.pilotNotRatingLabel.isHidden = pilot.hasRating()
             }
             
@@ -50,6 +49,10 @@ class TravelViewController: UIViewController {
                                 color: UIColor(white: 129.0 / 255.0, alpha: 1.0))
             
             self.customizeLabel(label: self.tripDistanceLabel, text: travel.distance.formatDistance(),
+                                color: UIColor(white: 1.0, alpha: 1.0))
+            
+            self.customizeLabel(label: self.tripDurationLabel,
+                                text: DateHelper.timeBetweenDates(from: travel.pickup.date, to: travel.dropOff.date),
                                 color: UIColor(white: 1.0, alpha: 1.0))
         }
     }
