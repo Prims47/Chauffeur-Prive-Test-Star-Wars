@@ -12,7 +12,12 @@ protocol TravelsListBusinessLogic {
     func fetchTravels()
 }
 
-class TravelsListInteractor: TravelsListBusinessLogic {
+protocol TravelsListDataStore {
+    var travel: Travel? { get set }
+}
+
+class TravelsListInteractor: TravelsListBusinessLogic, TravelsListDataStore {
+    var travel: Travel?
     var useCase: TravelUseCaseProtocol
     var presenter: TravelsListPresentationLogic
     
