@@ -52,6 +52,11 @@
 		119291822111B5C300605959 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119291812111B5C300605959 /* TravelTableViewCell.swift */; };
 		119291842112046B00605959 /* TravelsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119291832112046B00605959 /* TravelsListRouter.swift */; };
 		11929187211206B700605959 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11929186211206B700605959 /* TravelViewController.swift */; };
+		11EC2E2A21124F370080923F /* PilotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2E2921124F370080923F /* PilotTests.swift */; };
+		11EC2E2C211256A40080923F /* TripInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2E2B211256A40080923F /* TripInformationTests.swift */; };
+		11EC2E2E211261110080923F /* TravelDistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2E2D211261110080923F /* TravelDistanceTests.swift */; };
+		11EC2E30211266190080923F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2E2F211266190080923F /* DateHelper.swift */; };
+		11EC2E322112663A0080923F /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2E312112663A0080923F /* DateHelperTests.swift */; };
 		96C3FF5806AC373EBD30276A /* Pods_StarWarsChauffeurPrivee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29CEFF315E8B84EB28D392D /* Pods_StarWarsChauffeurPrivee.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +119,11 @@
 		119291812111B5C300605959 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		119291832112046B00605959 /* TravelsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsListRouter.swift; sourceTree = "<group>"; };
 		11929186211206B700605959 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		11EC2E2921124F370080923F /* PilotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotTests.swift; sourceTree = "<group>"; };
+		11EC2E2B211256A40080923F /* TripInformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformationTests.swift; sourceTree = "<group>"; };
+		11EC2E2D211261110080923F /* TravelDistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDistanceTests.swift; sourceTree = "<group>"; };
+		11EC2E2F211266190080923F /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		11EC2E312112663A0080923F /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		71A68365AAC9EF697865CDC8 /* Pods_StarWarsChauffeurPriveeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsChauffeurPriveeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9045B5E5A20DADA22216D273 /* Pods-StarWarsChauffeurPrivee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsChauffeurPrivee.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsChauffeurPrivee/Pods-StarWarsChauffeurPrivee.release.xcconfig"; sourceTree = "<group>"; };
 		A29CEFF315E8B84EB28D392D /* Pods_StarWarsChauffeurPrivee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsChauffeurPrivee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +191,7 @@
 		117BD334210F75FE002B341B /* StarWarsChauffeurPriveeTests */ = {
 			isa = PBXGroup;
 			children = (
+				11EC2E2721124F1A0080923F /* Domain */,
 				117BD3FE2110B680002B341B /* Common */,
 				117BD3F821109B9D002B341B /* Scenes */,
 				117BD3D2210FB6A2002B341B /* Network */,
@@ -377,6 +388,7 @@
 			children = (
 				117BD3ED211054D4002B341B /* AppConfig.swift */,
 				1192917C2111AC2400605959 /* Message.swift */,
+				11EC2E2F211266190080923F /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -410,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				117BD4002110B692002B341B /* AppConfigTests.swift */,
+				11EC2E312112663A0080923F /* DateHelperTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -428,6 +441,24 @@
 				11929186211206B700605959 /* TravelViewController.swift */,
 			);
 			path = Travel;
+			sourceTree = "<group>";
+		};
+		11EC2E2721124F1A0080923F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				11EC2E2821124F210080923F /* Entitties */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		11EC2E2821124F210080923F /* Entitties */ = {
+			isa = PBXGroup;
+			children = (
+				11EC2E2921124F370080923F /* PilotTests.swift */,
+				11EC2E2B211256A40080923F /* TripInformationTests.swift */,
+				11EC2E2D211261110080923F /* TravelDistanceTests.swift */,
+			);
+			path = Entitties;
 			sourceTree = "<group>";
 		};
 		4E44C4B9AC22859B38850D23 /* Frameworks */ = {
@@ -563,6 +594,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsChauffeurPrivee/Pods-StarWarsChauffeurPrivee-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -570,6 +602,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -658,6 +691,7 @@
 				1192917D2111AC2400605959 /* Message.swift in Sources */,
 				117BD321210F75FC002B341B /* AppDelegate.swift in Sources */,
 				117BD3CD210FAFAE002B341B /* Pilot+Serializable.swift in Sources */,
+				11EC2E30211266190080923F /* DateHelper.swift in Sources */,
 				117BD3F2211085A6002B341B /* TravelsListInteractor.swift in Sources */,
 				117BD3B0210F9CC7002B341B /* TravelUseCase.swift in Sources */,
 				117BD3AC210F9BE5002B341B /* TravelUseCaseProtocol.swift in Sources */,
@@ -669,8 +703,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EC2E2E211261110080923F /* TravelDistanceTests.swift in Sources */,
 				117BD3D7210FB807002B341B /* TripInformation+SerializableTests.swift in Sources */,
 				117BD3E8210FC913002B341B /* NetworkError.swift in Sources */,
+				11EC2E2A21124F370080923F /* PilotTests.swift in Sources */,
 				117BD3DE210FBFED002B341B /* StubbedNetworkerTests.swift in Sources */,
 				117BD4012110B692002B341B /* AppConfigTests.swift in Sources */,
 				117BD3E5210FC725002B341B /* TravelUseCaseTests.swift in Sources */,
@@ -680,6 +716,8 @@
 				117BD3D5210FB6C2002B341B /* Pilot+SerializableTests.swift in Sources */,
 				117BD3D9210FB8E4002B341B /* TravelDistance+SerializableTests.swift in Sources */,
 				117BD3DB210FB995002B341B /* Travel+SerializableTests.swift in Sources */,
+				11EC2E2C211256A40080923F /* TripInformationTests.swift in Sources */,
+				11EC2E322112663A0080923F /* DateHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

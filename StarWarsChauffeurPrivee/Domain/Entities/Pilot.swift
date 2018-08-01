@@ -12,4 +12,8 @@ struct Pilot {
     var avatar: String
     var name: String
     var rating: Int
+    
+    func hasRating() -> Bool {
+        return self.rating > 0
+    }
 }
