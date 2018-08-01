@@ -7,6 +7,7 @@ target 'StarWarsChauffeurPrivee' do
   pod 'Alamofire', '4.7.3'
   pod 'SwiftyJSON', '4.1.0'
   pod 'SwiftMessages', '4.1.4'
+  pod 'Kingfisher', '4.8.1'
 
   target 'StarWarsChauffeurPriveeTests' do
     inherit! :search_paths
