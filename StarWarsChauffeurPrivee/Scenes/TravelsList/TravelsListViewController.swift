@@ -55,6 +55,6 @@ extension TravelsListViewController: TravelsListDisplayLogic {
     }
     
     func displayError(viewModel: TravelsListModel.ViewModel.DisplayError) {
-        //@todo: display error
+        Message.show(theme: .error, title: "Error", body: viewModel.error)
     }
 }
