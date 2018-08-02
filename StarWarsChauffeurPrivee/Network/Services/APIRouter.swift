@@ -10,12 +10,15 @@ import Foundation
 
 enum APIRouter {
     case fetchTravels()
+    case fetchTravel(Int)
     
     func asStringURL() -> String {
         let path: String = {
             switch self {
             case .fetchTravels():
                 return "/trips"
+            case .fetchTravel(let tripID):
+                return "/trips/\(tripID)"
             }
         }()
         
