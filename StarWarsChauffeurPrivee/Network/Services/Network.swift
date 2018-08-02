@@ -10,10 +10,12 @@ import Foundation
 
 protocol NetworkProtocol {
     typealias CollectionCompletion<T> = ([T], Error?) -> Void
+    typealias ObjectCompletion<T> = (T?, Error?) -> Void
     
     var mockingFilename: String? { get set }
     
     mutating func requestCollection<T: CollectionSerializableProtocol>(url: String, completion: @escaping CollectionCompletion<T>)
+    mutating func requestObject<T: ObjectSerializableProtocol>(url: String, completion: @escaping ObjectCompletion<T>)
 }
 
 struct Network: NetworkProtocol {
@@ -34,5 +36,10 @@ struct Network: NetworkProtocol {
     mutating func requestCollection<T: CollectionSerializableProtocol>(url: String, completion: @escaping CollectionCompletion<T>) {
         self.networker.mockingFilename = self.mockingFilename
         self.networker.requestCollection(url: url, completion: completion)
+    }
+    
+    mutating func requestObject<T: ObjectSerializableProtocol>(url: String, completion: @escaping ObjectCompletion<T>) {
+        self.networker.mockingFilename = self.mockingFilename
+        self.networker.requestObject(url: url, completion: completion)
     }
 }

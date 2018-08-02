@@ -41,6 +41,36 @@ struct StubbedNetworker: NetworkProtocol {
         }
     }
     
+    func requestObject<T: ObjectSerializableProtocol>(url: String, completion: @escaping ObjectCompletion<T>) {
+        guard let file = mockingFilename else {
+            let error: NSError = NSError(domain: "CollectionStubbedNetworker", code: 1, userInfo: nil)
+            
+            completion(nil, error)
+            
+            return
+        }
+        
+        guard let jsonObjects = self.getJsonObject(fileName: file) else {
+            let error: NSError = NSError(domain: "NoMockFileStubbedNetworker", code: 1, userInfo: nil)
+            
+            completion(nil, error)
+            
+            return
+        }
+        
+        guard let json = try? JSONSerialization.jsonObject(with: jsonObjects, options: []) else {
+            let error: NSError = NSError(domain: "JSONSerializationStubbedNetworker", code: 1, userInfo: nil)
+            
+            completion(nil, error)
+            
+            return
+        }
+        
+        DispatchQueue.main.async {
+            completion(T.object(data: json as AnyObject), nil)
+        }
+    }
+    
     private func getJsonObject(fileName: String) -> Data? {
         guard let path = Bundle.main.url(forResource: fileName, withExtension: "json") else { return nil }
         let jsonData = try? Data(contentsOf: path)

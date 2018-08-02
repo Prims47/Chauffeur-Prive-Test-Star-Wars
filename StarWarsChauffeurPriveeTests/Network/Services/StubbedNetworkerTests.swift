@@ -20,7 +20,7 @@ class StubbedNetworkerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testErrorNoMockfile() {
+    func testErrorCollectionNoMockfile() {
         let stubbedNetwork = StubbedNetworker(mockingFilename: nil)
         
         stubbedNetwork.requestCollection(url: "http://Pepitooooooooo.fr") { (travels: [Travel], error) in
@@ -29,7 +29,7 @@ class StubbedNetworkerTests: XCTestCase {
         }
     }
     
-    func testErrorMockfileDontExist() {
+    func testErrorCollectionMockfileDontExist() {
         let stubbedNetwork = StubbedNetworker(mockingFilename: "pepitoLeMock")
         
         stubbedNetwork.requestCollection(url: "http://Pepitooooooooo.fr") { (travels: [Travel], error) in
@@ -38,7 +38,7 @@ class StubbedNetworkerTests: XCTestCase {
         }
     }
     
-    func testErrorMockfileEmpty() {
+    func testErrorCollectionMockfileEmpty() {
         let stubbedNetwork = StubbedNetworker(mockingFilename: "emptyJson")
         
         stubbedNetwork.requestCollection(url: "http://Pepitooooooooo.fr") { (travels: [Travel], error) in
@@ -52,6 +52,42 @@ class StubbedNetworkerTests: XCTestCase {
         
         stubbedNetwork.requestCollection(url: "http://Pepitooooooooo.fr") { (travels: [Travel], error) in
             XCTAssertEqual(7, travels.count)
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testErrorObjectNoMockfile() {
+        let stubbedNetwork = StubbedNetworker(mockingFilename: nil)
+        
+        stubbedNetwork.requestObject(url: "http://Pepitooooooooo.fr") { (travel: Travel?, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(travel)
+        }
+    }
+    
+    func testErrorObjectMockfileDontExist() {
+        let stubbedNetwork = StubbedNetworker(mockingFilename: "pepitoLeMock")
+        
+        stubbedNetwork.requestObject(url: "http://Pepitooooooooo.fr") { (travel: Travel?, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(travel)
+        }
+    }
+    
+    func testErrorObjectMockfileEmpty() {
+        let stubbedNetwork = StubbedNetworker(mockingFilename: "emptyJson")
+        
+        stubbedNetwork.requestObject(url: "http://Pepitooooooooo.fr") { (travel: Travel?, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(travel)
+        }
+    }
+    
+    func testSuccessObject() {
+        let stubbedNetwork = StubbedNetworker(mockingFilename: "travel")
+        
+        stubbedNetwork.requestObject(url: "http://Pepitooooooooo.fr") { (travel: Travel?, error) in
+            XCTAssertNotNil(travel)
             XCTAssertNil(error)
         }
     }

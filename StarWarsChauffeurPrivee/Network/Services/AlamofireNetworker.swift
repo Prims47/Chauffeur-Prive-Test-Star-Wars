@@ -31,4 +31,24 @@ struct AlamofireNetworker: NetworkProtocol {
             }
         }
     }
+    
+    func requestObject<T: ObjectSerializableProtocol>(url: String, completion: @escaping ObjectCompletion<T>) {
+        Alamofire.request(url).validate().responseJSON { response in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {
+                    let error: NSError = NSError(domain: "CollectionAlamofireDataNetworker", code: 1, userInfo: nil)
+                    completion(nil, error)
+                    
+                    return
+                }
+                
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                
+                completion(T.object(data: json as AnyObject), nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
 }

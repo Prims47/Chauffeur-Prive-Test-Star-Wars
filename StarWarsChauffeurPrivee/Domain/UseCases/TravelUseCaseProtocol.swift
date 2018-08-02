@@ -10,6 +10,8 @@ import Foundation
 
 protocol TravelUseCaseProtocol {
     typealias TravelsCompletion = ([Travel], Error?) -> Void
+    typealias TravelCompletion = (Travel?, Error?) -> Void
     
     mutating func travels(completion: @escaping TravelsCompletion)
+    mutating func travel(travelID: Int, completion: @escaping TravelCompletion)
 }

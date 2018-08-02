@@ -27,4 +27,17 @@ struct TravelUseCase: TravelUseCaseProtocol {
             completion(travels, nil)
         }
     }
+    
+    mutating func travel(travelID: Int, completion: @escaping TravelUseCaseProtocol.TravelCompletion) {
+        self.network.mockingFilename = "travel"
+        self.network.requestObject(url: APIRouter.fetchTravel(travelID).asStringURL()) { (travel: Travel?, error) in
+            if let err = error {
+                completion(nil, err)
+                
+                return
+            }
+            
+            completion(travel, nil)
+        }
+    }
 }

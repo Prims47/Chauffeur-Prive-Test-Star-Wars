@@ -25,7 +25,7 @@ class TravelUseCaseTests: XCTestCase {
         useExpectation = nil
     }
     
-    func testSuccessUseCase() {
+    func testSuccessTravelsUseCase() {
         var useCase = TravelUseCase(network: Network())
         
         useCase.travels {[weak self] (travels: [Travel], error) in
@@ -38,12 +38,38 @@ class TravelUseCaseTests: XCTestCase {
         waitForExpectations(timeout: 1.0, handler: nil)
     }
     
-    func testErrorUseCase() {
+    func testErrorTravelsUseCase() {
         var useCase = TravelUseCase(network: NetworkError(mockingFilename: "pepito"))
         
         useCase.travels {[weak self] (travels: [Travel], error) in
             XCTAssertNotNil(error)
             XCTAssertTrue(travels.isEmpty)
+            
+            self?.useExpectation?.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testSuccessTravelUseCase() {
+        var useCase = TravelUseCase(network: Network())
+        
+        useCase.travel(travelID: 1) {[weak self] (travel: Travel?, error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(travel)
+            
+            self?.useExpectation?.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testErrorTravelUseCase() {
+        var useCase = TravelUseCase(network: NetworkError(mockingFilename: "pepito"))
+        
+        useCase.travel(travelID: 770) {[weak self] (travel: Travel?, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(travel)
             
             self?.useExpectation?.fulfill()
         }

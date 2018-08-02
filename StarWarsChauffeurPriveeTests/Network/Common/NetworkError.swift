@@ -13,7 +13,11 @@ import Foundation
 struct NetworkError: NetworkProtocol {
     var mockingFilename: String?
     
-    mutating func requestCollection<T>(url: String, completion: @escaping ([T], Error?) -> Void) where T : CollectionSerializableProtocol {
+    mutating func requestCollection<T: CollectionSerializableProtocol>(url: String, completion: @escaping CollectionCompletion<T>) {
         completion([], NSError(domain: "error", code: 400, userInfo: nil))
+    }
+    
+    mutating func requestObject<T: ObjectSerializableProtocol>(url: String, completion: @escaping ObjectCompletion<T>) {
+        completion(nil, NSError(domain: "error", code: 400, userInfo: nil))
     }
 }

@@ -25,7 +25,7 @@ class AlamofireNetworkerTests: XCTestCase {
         alamofireExpectation = nil
     }
     
-    func testUrlNotFound() {
+    func testCollectionUrlNotFound() {
         let alamofireNetwork = AlamofireNetworker(mockingFilename: "pepito")
         
         alamofireNetwork.requestCollection(url: "https://pepitoooooooooo.fr") {[weak self] (travels: [Travel], error) in
@@ -43,6 +43,31 @@ class AlamofireNetworkerTests: XCTestCase {
         alamofireNetwork.requestCollection(url: APIRouter.fetchTravels().asStringURL()) {[weak self] (travels: [Travel], error) in
             XCTAssertNil(error)
             XCTAssertEqual(7, travels.count)
+            
+            self?.alamofireExpectation?.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testObjectUrlNotFound() {
+        let alamofireNetwork = AlamofireNetworker(mockingFilename: "pepito")
+        
+        alamofireNetwork.requestObject(url: "https://pepitoooooooooo.fr") {[weak self] (travel: Travel?, error) in
+            XCTAssertNotNil(error)
+            
+            self?.alamofireExpectation?.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testIntegrationTravel() {
+        let alamofireNetwork = AlamofireNetworker(mockingFilename: "pepito")
+        
+        alamofireNetwork.requestObject(url: APIRouter.fetchTravel(1).asStringURL()) {[weak self] (travel: Travel?, error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(travel)
             
             self?.alamofireExpectation?.fulfill()
         }
