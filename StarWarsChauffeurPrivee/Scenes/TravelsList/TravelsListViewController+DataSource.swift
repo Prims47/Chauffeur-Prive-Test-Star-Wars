@@ -14,7 +14,7 @@ extension TravelsListViewController: UITableViewDelegate {
         let travel = self.travels[indexPath.row]
         
         var dataStore = self.router?.dataStore
-        dataStore?.travel = travel
+        dataStore?.travelID = travel.id
         
         self.router?.detailTravel()
     }

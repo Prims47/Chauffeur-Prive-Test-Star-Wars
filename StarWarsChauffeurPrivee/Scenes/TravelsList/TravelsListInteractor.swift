@@ -13,11 +13,11 @@ protocol TravelsListBusinessLogic {
 }
 
 protocol TravelsListDataStore {
-    var travel: Travel? { get set }
+    var travelID: Int? { get set }
 }
 
 class TravelsListInteractor: TravelsListBusinessLogic, TravelsListDataStore {
-    var travel: Travel?
+    var travelID: Int?
     var useCase: TravelUseCaseProtocol
     var presenter: TravelsListPresentationLogic
     

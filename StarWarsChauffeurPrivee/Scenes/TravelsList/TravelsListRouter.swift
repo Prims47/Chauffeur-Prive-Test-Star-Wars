@@ -21,12 +21,12 @@ class TravelsListRouter: TravelsListRoutingLogic, TravelsListDataPassing {
     weak var viewController: UIViewController?
     
     func detailTravel() {
-        guard let travel = dataStore?.travel else { return }
+        guard let travelID = dataStore?.travelID else { return }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let viewController = storyboard.instantiateViewController(withIdentifier: "TravelViewController") as? TravelViewController {
-            viewController.travel = travel
+            viewController.travelID = travelID
             self.viewController?.navigationController?.pushViewController(viewController, animated: true)
         }
     }

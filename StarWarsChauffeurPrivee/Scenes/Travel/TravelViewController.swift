@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol TravelDisplayLogic: class {
+    func displayTravel(viewModel: TravelModel.ViewModel.DisplayTravel)
+    func displayError(viewModel: TravelModel.ViewModel.DisplayError)
+}
+
 class TravelViewController: UIViewController {
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var pilotImageView: UIImageView!
@@ -19,42 +24,28 @@ class TravelViewController: UIViewController {
     @IBOutlet weak var tripDistanceLabel: UILabel!
     @IBOutlet weak var tripDurationLabel: UILabel!
     @IBOutlet weak var pilotNotRatingLabel: UILabel!
+    @IBOutlet weak var ratingView: UIView!
     
-    var travel: Travel?
+    var travelID: Int?
+    
+    var interactor: TravelBusinessLogic?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.setupUI()
-        
-        //@todo: usecase for travel id ?
-        //@todo: improve this
-        if let travel = self.travel {
-            if let pilot = self.travel?.pilot {
-                self.customizePilotName(pilotName: pilot.name)
-                self.handlePilotImage(avatar: pilot.avatar)
-
-                self.pilotNotRatingLabel.isHidden = pilot.hasRating()
-            }
-            
-            self.customizeLabel(label: self.pickupPlanetLabel, text: travel.pickup.planetName.uppercased(),
-                                color: UIColor(white: 1.0, alpha: 1.0))
-            self.customizeLabel(label: self.dropOffPlanetLabel, text: travel.dropOff.planetName.uppercased(),
-                                color: UIColor(white: 1.0, alpha: 1.0))
-            
-            self.customizeLabel(label: self.pickupPlanetDate, text: travel.pickup.formatDate(),
-                                color: UIColor(white: 129.0 / 255.0, alpha: 1.0))
-            self.customizeLabel(label: self.dropOffPlanetDate, text: travel.dropOff.formatDate(),
-                                color: UIColor(white: 129.0 / 255.0, alpha: 1.0))
-            
-            self.customizeLabel(label: self.tripDistanceLabel, text: travel.distance.formatDistance(),
-                                color: UIColor(white: 1.0, alpha: 1.0))
-            
-            self.customizeLabel(label: self.tripDurationLabel,
-                                text: DateHelper.timeBetweenDates(from: travel.pickup.date, to: travel.dropOff.date),
-                                color: UIColor(white: 1.0, alpha: 1.0))
-        }
+        self.fetchTravel()
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.setupVIP()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupVIP()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +58,23 @@ class TravelViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func fetchTravel() {
+        if let travelID = travelID {
+            self.interactor?.fetchTravel(request: TravelModel.Request(travelID: travelID))
+        }
+    }
+    
+    // MARK: - Setup VIP
+    
+    private func setupVIP() {
+        let viewController = self
+        let useCase = TravelUseCase(network: Network())
+        let presenter = TravelPresenter()
+        presenter.viewController = viewController
+        let interactor = TravelInteractor(useCase: useCase, presenter: presenter)
+        viewController.interactor = interactor
     }
 }
 
@@ -127,5 +135,47 @@ extension TravelViewController {
     
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: - TravelDisplayLogic
+extension TravelViewController: TravelDisplayLogic {
+    func displayTravel(viewModel: TravelModel.ViewModel.DisplayTravel) {
+        //@todo: add loader
+        self.populateTravelInfo(travel: viewModel.travel)
+
+        if viewModel.travel.pilot.hasRating(), let view = Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil)?.first as? StarRatingView {
+            self.pilotNotRatingLabel.isHidden = true
+            view.configure(pilot: viewModel.travel.pilot)
+            ratingView.addSubview(view)
+        }
+    }
+    
+    func displayError(viewModel: TravelModel.ViewModel.DisplayError) {
+        Message.show(theme: .error, title: "Error", body: viewModel.error)
+    }
+    
+    func populateTravelInfo(travel: Travel) {
+        self.customizePilotName(pilotName: travel.pilot.name)
+        self.handlePilotImage(avatar: travel.pilot.avatar)
+        
+        self.pilotNotRatingLabel.isHidden = travel.pilot.hasRating()
+
+        self.customizeLabel(label: self.pickupPlanetLabel, text: travel.pickup.planetName.uppercased(),
+                            color: UIColor(white: 1.0, alpha: 1.0))
+        self.customizeLabel(label: self.dropOffPlanetLabel, text: travel.dropOff.planetName.uppercased(),
+                            color: UIColor(white: 1.0, alpha: 1.0))
+        
+        self.customizeLabel(label: self.pickupPlanetDate, text: travel.pickup.formatDate(),
+                            color: UIColor(white: 129.0 / 255.0, alpha: 1.0))
+        self.customizeLabel(label: self.dropOffPlanetDate, text: travel.dropOff.formatDate(),
+                            color: UIColor(white: 129.0 / 255.0, alpha: 1.0))
+        
+        self.customizeLabel(label: self.tripDistanceLabel, text: travel.distance.formatDistance(),
+                            color: UIColor(white: 1.0, alpha: 1.0))
+        
+        self.customizeLabel(label: self.tripDurationLabel,
+                            text: DateHelper.timeBetweenDates(from: travel.pickup.date, to: travel.dropOff.date),
+                            color: UIColor(white: 1.0, alpha: 1.0))
     }
 }
