@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0557D7A7CD244A5206E33DE9 /* Pods_StarWarsChauffeurPriveeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A68365AAC9EF697865CDC8 /* Pods_StarWarsChauffeurPriveeTests.framework */; };
+		114062D72112EAE600A23D2D /* TravelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062D62112EAE600A23D2D /* TravelInteractor.swift */; };
+		114062D92112EB1400A23D2D /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062D82112EB1400A23D2D /* TravelModel.swift */; };
+		114062DB2112EEC500A23D2D /* travel.json in Resources */ = {isa = PBXBuildFile; fileRef = 114062DA2112EEC500A23D2D /* travel.json */; };
+		114062DD2112F31800A23D2D /* TravelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062DC2112F31800A23D2D /* TravelPresenter.swift */; };
+		114062E02112F8BE00A23D2D /* TravelInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062DF2112F8BE00A23D2D /* TravelInteractorTests.swift */; };
+		114062E32112F95300A23D2D /* TravelUseCaseForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062E22112F95300A23D2D /* TravelUseCaseForTests.swift */; };
+		114062E5211301AF00A23D2D /* TravelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062E4211301AF00A23D2D /* TravelPresenterTests.swift */; };
+		114062E82113047200A23D2D /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114062E72113047200A23D2D /* StarRatingView.swift */; };
+		114062EA2113047E00A23D2D /* StarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114062E92113047E00A23D2D /* StarRatingView.xib */; };
 		117BD321210F75FC002B341B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD320210F75FC002B341B /* AppDelegate.swift */; };
 		117BD323210F75FD002B341B /* TravelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BD322210F75FD002B341B /* TravelsListViewController.swift */; };
 		117BD326210F75FD002B341B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117BD324210F75FD002B341B /* Main.storyboard */; };
@@ -71,6 +80,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		114062D62112EAE600A23D2D /* TravelInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInteractor.swift; sourceTree = "<group>"; };
+		114062D82112EB1400A23D2D /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		114062DA2112EEC500A23D2D /* travel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = travel.json; sourceTree = "<group>"; };
+		114062DC2112F31800A23D2D /* TravelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPresenter.swift; sourceTree = "<group>"; };
+		114062DF2112F8BE00A23D2D /* TravelInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInteractorTests.swift; sourceTree = "<group>"; };
+		114062E22112F95300A23D2D /* TravelUseCaseForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelUseCaseForTests.swift; sourceTree = "<group>"; };
+		114062E4211301AF00A23D2D /* TravelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPresenterTests.swift; sourceTree = "<group>"; };
+		114062E72113047200A23D2D /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		114062E92113047E00A23D2D /* StarRatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingView.xib; sourceTree = "<group>"; };
 		117BD31D210F75FC002B341B /* StarWarsChauffeurPrivee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsChauffeurPrivee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117BD320210F75FC002B341B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117BD322210F75FD002B341B /* TravelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsListViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +170,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		114062DE2112F8AC00A23D2D /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				114062DF2112F8BE00A23D2D /* TravelInteractorTests.swift */,
+				114062E4211301AF00A23D2D /* TravelPresenterTests.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		114062E12112F93B00A23D2D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				114062E22112F95300A23D2D /* TravelUseCaseForTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		114062E62113045700A23D2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114062E72113047200A23D2D /* StarRatingView.swift */,
+				114062E92113047E00A23D2D /* StarRatingView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		117BD314210F75FC002B341B = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +323,7 @@
 		117BD3B8210F9EEF002B341B /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				114062DA2112EEC500A23D2D /* travel.json */,
 				117BD3DF210FC21C002B341B /* emptyJson.json */,
 				117BD3B9210F9F2F002B341B /* travels.json */,
 			);
@@ -378,6 +423,7 @@
 		117BD3EB21105223002B341B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				114062E62113045700A23D2D /* Views */,
 				117BD3EC211054A7002B341B /* Helpers */,
 			);
 			path = Common;
@@ -396,6 +442,8 @@
 		117BD3F821109B9D002B341B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				114062E12112F93B00A23D2D /* Common */,
+				114062DE2112F8AC00A23D2D /* Travel */,
 				117BD3F921109BA8002B341B /* TravelsList */,
 			);
 			path = Scenes;
@@ -439,6 +487,9 @@
 			isa = PBXGroup;
 			children = (
 				11929186211206B700605959 /* TravelViewController.swift */,
+				114062D62112EAE600A23D2D /* TravelInteractor.swift */,
+				114062D82112EB1400A23D2D /* TravelModel.swift */,
+				114062DC2112F31800A23D2D /* TravelPresenter.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -570,6 +621,8 @@
 				117BD3E0210FC21C002B341B /* emptyJson.json in Resources */,
 				117BD3BA210F9F2F002B341B /* travels.json in Resources */,
 				117BD328210F75FE002B341B /* Assets.xcassets in Resources */,
+				114062DB2112EEC500A23D2D /* travel.json in Resources */,
+				114062EA2113047E00A23D2D /* StarRatingView.xib in Resources */,
 				117BD3F0211082C9002B341B /* Settings.bundle in Resources */,
 				117BD326210F75FD002B341B /* Main.storyboard in Resources */,
 			);
@@ -668,12 +721,14 @@
 			files = (
 				11929187211206B700605959 /* TravelViewController.swift in Sources */,
 				117BD3B7210F9EA7002B341B /* StubbedNetworker.swift in Sources */,
+				114062D72112EAE600A23D2D /* TravelInteractor.swift in Sources */,
 				117BD3C7210FA453002B341B /* Travel+Serializable.swift in Sources */,
 				117BD3BF210FA289002B341B /* SerializablesProtocol.swift in Sources */,
 				117BD3A5210F9B0B002B341B /* Pilot.swift in Sources */,
 				117BD3CF210FB29B002B341B /* TripInformation+Serializable.swift in Sources */,
 				117BD3A7210F9B85002B341B /* TripInformation.swift in Sources */,
 				119291842112046B00605959 /* TravelsListRouter.swift in Sources */,
+				114062E82113047200A23D2D /* StarRatingView.swift in Sources */,
 				117BD3B3210F9D15002B341B /* Network.swift in Sources */,
 				117BD3EE211054D4002B341B /* AppConfig.swift in Sources */,
 				119291822111B5C300605959 /* TravelTableViewCell.swift in Sources */,
@@ -682,6 +737,7 @@
 				117BD3C9210FA56C002B341B /* APIRouter.swift in Sources */,
 				117BD3D1210FB58A002B341B /* TravelDistance+Serializable.swift in Sources */,
 				117BD3CB210FAF29002B341B /* TravelDistance.swift in Sources */,
+				114062DD2112F31800A23D2D /* TravelPresenter.swift in Sources */,
 				117BD3A9210F9BAB002B341B /* Travel.swift in Sources */,
 				117BD3C4210FA3A3002B341B /* ApiKeys.swift in Sources */,
 				117BD3BC210F9FD6002B341B /* AlamofireNetworker.swift in Sources */,
@@ -692,6 +748,7 @@
 				11EC2E30211266190080923F /* DateHelper.swift in Sources */,
 				117BD3F2211085A6002B341B /* TravelsListInteractor.swift in Sources */,
 				117BD3B0210F9CC7002B341B /* TravelUseCase.swift in Sources */,
+				114062D92112EB1400A23D2D /* TravelModel.swift in Sources */,
 				117BD3AC210F9BE5002B341B /* TravelUseCaseProtocol.swift in Sources */,
 				1192917F2111B53F00605959 /* TravelsListViewController+DataSource.swift in Sources */,
 			);
@@ -701,12 +758,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114062E5211301AF00A23D2D /* TravelPresenterTests.swift in Sources */,
 				11EC2E2E211261110080923F /* TravelDistanceTests.swift in Sources */,
 				117BD3D7210FB807002B341B /* TripInformation+SerializableTests.swift in Sources */,
+				114062E02112F8BE00A23D2D /* TravelInteractorTests.swift in Sources */,
 				117BD3E8210FC913002B341B /* NetworkError.swift in Sources */,
 				11EC2E2A21124F370080923F /* PilotTests.swift in Sources */,
 				117BD3DE210FBFED002B341B /* StubbedNetworkerTests.swift in Sources */,
 				117BD4012110B692002B341B /* AppConfigTests.swift in Sources */,
+				114062E32112F95300A23D2D /* TravelUseCaseForTests.swift in Sources */,
 				117BD3E5210FC725002B341B /* TravelUseCaseTests.swift in Sources */,
 				117BD3FB21109BB8002B341B /* TravelsListInteractorTests.swift in Sources */,
 				117BD3E2210FC4A7002B341B /* AlamofireNetworkerTests.swift in Sources */,
