@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 struct TripInformation {
     var planetName: String
@@ -15,8 +14,14 @@ struct TripInformation {
     var date: String
     
     func formatDate() -> String {
-        guard let date = self.date.toDate() else { return self.date }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        guard let formatDate = dateFormatter.date(from: self.date) else { return self.date }
 
-        return date.toFormat("h:mm a")
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.locale = Locale(identifier: "fr_FR")
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        return dateFormatter.string(from: formatDate)
     }
 }
