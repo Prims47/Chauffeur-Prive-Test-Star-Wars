@@ -34,10 +34,18 @@ class DateHelperTests: XCTestCase {
         XCTAssertEqual("5:22:51", DateHelper.timeBetweenDates(from: fromHoth, to: toYavin))
     }
     
-    func testErrorDate() {
+    func testErrorTimeBetweenDates() {
         let fromNaboo = "2017"
         let toCoruscant = "2017-12"
         
         XCTAssertEqual("00:00:00", DateHelper.timeBetweenDates(from: fromNaboo, to: toCoruscant))
+    }
+    
+    func testDateFromString() {
+        XCTAssertNotNil(DateHelper.dateFromString(date: "2017-12-09T14:12:51Z"))
+    }
+    
+    func testErrorDateFromString() {
+        XCTAssertNil(DateHelper.dateFromString(date: "2017"))
     }
 }

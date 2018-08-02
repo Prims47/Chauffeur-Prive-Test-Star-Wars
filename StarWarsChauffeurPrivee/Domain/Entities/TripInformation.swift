@@ -14,10 +14,9 @@ struct TripInformation {
     var date: String
     
     func formatDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        guard let formatDate = dateFormatter.date(from: self.date) else { return self.date }
+        guard let formatDate = DateHelper.dateFromString(date: self.date) else { return self.date }
 
+        let dateFormatter =  DateFormatter()
         dateFormatter.dateFormat = "h:mm a"
         dateFormatter.locale = Locale(identifier: "fr_FR")
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
